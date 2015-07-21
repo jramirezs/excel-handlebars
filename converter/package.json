@@ -1,0 +1,14 @@
+{
+  "name": "converter",
+  "version": "0.0.1",
+  "description": "Module to bootstrap data from an Excel file given a template",
+  "author": "Jorge Ramírez Serrato",
+  "dependencies": {
+    "handlebars": "^3.0.3",
+    "xlsx-to-json": "^0.2.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  }
+}
