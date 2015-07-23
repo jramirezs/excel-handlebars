@@ -1,0 +1,24 @@
+{
+  "_note": "Package file created to get all dependencies and deploy on Heroku. Each module has their own package.json in source code",
+  "name": "excel-handlebars",
+  "version": "0.0.1",
+  "description": "Create text snippets using handlebars as template system with Excel files as data source",
+  "author": "Jorge Ramírez Serrato",
+  "engines": {
+    "node": "0.12.x",
+    "npm": "2.11.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "ejs": "^2.3.3",
+    "express": "^4.13.1",
+    "multer": "^1.0.1",
+    "handlebars": "^3.0.3",
+    "xlsx-to-json": "^0.2.3",
+    "bower": "^1.4.1"
+  },
+  "scripts": {
+    "test": "mocha",
+    "postinstall": "bower install ./website/"
+  }
+}

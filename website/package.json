@@ -8,5 +8,8 @@
     "ejs": "^2.3.3",
     "express": "^4.13.1",
     "multer": "^1.0.1"
+  },
+  "devDependencies":{
+    "bower": "^1.4.1"
   }
 }
