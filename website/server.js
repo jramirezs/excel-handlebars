@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require("body-parser");
 var multer = require('multer');
 var converter = require('../converter/lib/converter');
+var path = require('path');
 
 var app = express();
 
@@ -33,6 +34,11 @@ app.post('/', function(req, res, next) {
 
     var template = req.body.template;
     var filePath = req.file.path;
+
+    if(path.extname(req.file.originalname) != '.xlsx') {
+      res.render('index', { template: null, result: 'File must be .xlsx' });
+      return;
+    }
 
     converter(template, filePath, function (err, snippet) {
       var result = err ? err : snippet;
